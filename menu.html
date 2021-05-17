@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <script src="../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="menu.js" type="text/javascript"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="popup" id="popup">
+      <button id="logoutbtn" class="logout-button cursor" style='display:none'>Logout</button>
+      <!-- <div class="close-button"><a href="javascript: void(0);"><img src="../img/close_icon.png"></a></div> -->
+
+        <!-- Credits Display Div -->
+        <!-- <div class="credit-button">
+            <span class="color-white"><strong id="usr_crd_sh_st" style="float: right;">4,261</strong></span><br>
+            <span class="color-white">credits</span>
+        </div> -->
+        <!-- Credits Display Div -->
+
+        <!-- Start profile -->
+        <div class="profile">
+            <img class="topsection__image" id="profile_url" src="../img/profile_image.png">
+            <h2 class="profile-heading topsection__name" id="profile_name" style='margin-top:8px !important;'>Alexis Ohanian</h2>
+            <h4 class="profile-sub-heading topsection__headline" id="profile_position">Co-founder</h4>
+            <p class="profile-details"> 
+                <span class="topsection__company" id="profile_company">Reddit, </span>  
+                <span class="topsection__school" id="profile_school">University of Virginia </span>
+                <br>
+                <span class="topsection__location" id="profile_address">San Francisco, California</span><!-- <b id="profile_country">, US </b> -->
+            </p>
+        </div><br>
+       
+      <button id="waitbtn1" class="back-button" style='display:none'>
+      <img src="../img/loading1.gif" style='height:20px;width:20px;'></img> WAIT</button>
+
+      <div class="login-box" id="login-box1">
+        <img class="login-box-logo" src="../img/logo.png" >
+        <br />
+        <!-- Current URL: <span id="currentUrl"></span> -->
+          <form id="loginForm">
+            <div class="form-group">
+              <input type="text" class="form-control custom-form" id="user-email" name="user[email]" value="" placeholder="Email address">
+              <input type="password" class="form-control custom-form" id="user-password" name="user[password]" value="" placeholder="Password">
+            </div><br>
+              <button class="g-recaptcha eml_pho_shwall btn btn-default custom-btn margin-0 cursor" data-sitekey="6LdMn2YUAAAAAHTVkprlqI803EQl0RIZ_o1js6rG" data-callback='getLogIn'>Login</button>
+          </form>
+          <div class="error-div" id="error_detail" style='color:red;font-weight: bold;'></div>
+              <h3><a target="_blank" href="https://www.peoplesmart.com/app/login">Don't Have an Account</a></h3>
+      </div>
+      <br>
+      <button id="backbtn" class="back-button cursor" style='display:none'>Back</button>
+       
+      <button id="waitbtn" class="back-button" style='display:none'>
+      <img src="../img/loading1.gif" style='height:20px;width:20px;'></img> WAIT</button>
+
+      <!-- <button id="getAccountInfoButton">Get Account Info</button> -->
+      <!-- <button id="getuserInfoButton">Get USER Info</button> -->
+
+        <div id="initial-state" style='display:none'>
+            <div class="retrive-info">
+              <h3 style='font-size:18px;color:#6c6f99'>Go to linkedin profile page</h3>
+              <p class="login-text"><strong>You are not on linkedin profile page please go there then it will works</strong></p>
+              <p><a href="https://www.peoplesmart.com/help/" target="_blank"><strong>Learn More >> </strong></a></p>
+            </div>       
+        </div>
+        <!-- END initial-state -->
+        <!-- Start social-data -->
+        <div id="social-data">
+        </div>
+        <!-- END social-data -->
+        <!-- Start credit-limit -->
+        <div id="credit-limit" style='display:none;'>
+            <div class="login-box"  >
+
+              <div class="form-group" id="monthly_pan" style='display:none'>
+                  <h1 style='font-size:30px;' id="rem-credits" >0</h1>
+                  <h3>Credits Available</h3>
+                  <p>Your Plan includes <b id="tot-credits">0</b> credits per month</p>
+              </div>
+              <div class="form-group" id="unlimited_plan" style='display:none'>
+                  <h2 style='font-size:30px;'>Unlimited</h2>
+                  <h3>Credits Available</h3>
+              </div>
+        
+              <div class="form-group">
+                  <input type="hidden" class="form-control custom-form" readonly id="linkedinurlid" name="linkedinurl" placeholder="Enter Email Address" >
+              </div>
+                  <button id="usercreateData" class="eml_pho_shwall btn btn-default custom-btn margin-0 cursor">Retrive Contact Info</button>
+              <div id="get_more_credit" style='display:none'>
+                   <h3 class="error-div" style='color:red;font-weight: bold;'>0 credit available</h3>
+              </div>
+                  <h3 ><a target="_blank" href="https://www.peoplesmart.com/app/login" class="cursor">Get more credits > </a></h3>
+            </div>
+        </div>
+        <!-- END credit-limit -->
+    </div>
+    <div class="fixed-footer">
+        <p class="footer-text margin-0">Prospecting <img class="fx-ft-logo" src="../img/logo.png"/ style='height:20px;width:20px;'></p>
+        <p><span class="footer-text-small">POWERED BY</span>
+        <img src="../img/ktc_logo.png" class="ktc_logo fx-ft-pw-logo"/></p>
+    </div>
+
+  </body>
+</html>
